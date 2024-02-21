@@ -20,6 +20,30 @@
   --font-heading4: "Roboto Condensed", sans-serif;
   --font-intro: "Roboto Condensed", sans-serif;
   --font-main: "Roboto Condensed", sans-serif;
+
+
+
+  --color-bg: #D2EAEC;
+  --color-bg-light: #edf3f4;
+  --color-dark: #000;
+  --color-gray: #e2e3e5;
+  --color-light: #FFFFFF;
+  --color-shape: #c7a2a2;
+  --color-error: #f57676;
+  --color-bright: #f57676;
+  --color-bright-mid: #FB9C92;
+  --color-bright-mid-light: #FAD6CD;
+  --color-bright-light: #FEF6F6;
+  --color-bright-text: #f57676;
+  --color-primary: #1c747c;
+  --color-secondary: #578f96;
+  --color-highlight: #ffcece;
+  --color-heading1: #000;
+  --color-heading2: #1c747c;
+  --color-heading3: #000000;
+  --color-heading4: #439097;
+  --color-link: #f57676;
+  --color-purple: #D2DDEC;
 }
 
 body {
@@ -32,13 +56,20 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+  /* LOGO */
+  .logo {
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
 
 /* --- HERO --- */
 .hero-base {
   position: relative;
 }
 .hero-bg {
-  position: relative;
   background-attachment: scroll;
   background-position: right 75%;
   background-repeat: no-repeat;
@@ -50,19 +81,20 @@ body {
 }
 .hero-shapes {
   background-color: black;
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 44;
   left: 0;
   width: 100%;
   height: 100%;
   clip-path: polygon(0 0, 16% 0, 0 95%, 91% 100%, 100% 28%, 100% 100%, 91% 100%, 0 95%);
-  z-index: 300;
+  z-index: 900;
   transition: 1s;
 }
 .hero-container {
+  position: absolute;
   padding-top: 10px;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(185, 214, 216, .5) 70%, rgba(185, 214, 216, 0) 100%) !important;
+  /* background: rgb(255, 255, 255); */
+  /* background: linear-gradient(180deg, rgba(185, 214, 216, .5) 70%, rgba(185, 214, 216, 0) 100%) !important; */
   z-index: 400;
 }
 .hero-header {

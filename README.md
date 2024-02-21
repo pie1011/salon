@@ -55,3 +55,7 @@ pnpm dev
 ```
 
 Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) ([Documentation](https://nextjs.org/docs/deployment)).
+
+
+## Helpful links for dev
+[Next Fonts](https://nextjs.org/docs/app/api-reference/components/font)

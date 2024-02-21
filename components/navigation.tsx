@@ -1,11 +1,17 @@
-import React from "react";
+'use client'
+import React, { useState } from "react";
 import { playfair_display } from "@/app/fonts";
 
 const Navigation: React.FC = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const linkClass = "flex items-center text-lg font-extrabold text-black logo";
 
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-    <nav className="container mx-auto px-4 py-2 flex items-center justify-between">
+    <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
       <a href="/" className={`${linkClass} ${playfair_display.className} `}>
         the
         <svg
@@ -21,14 +27,41 @@ const Navigation: React.FC = () => {
         </svg>
         salon
       </a>
-      <ul className="flex space-x-4">
+      <button
+        className="md:hidden"
+        onClick={toggleNav}
+        aria-label="Toggle navigation"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {isNavOpen ? (
+            <path d="M18 6L6 18M6 6l12 12" />
+          ) : (
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          )}
+        </svg>
+      </button>
+      <ul
+        className={`${
+          isNavOpen ? "block" : "hidden"
+        } md:flex md:space-x-4`}
+      >
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <a href="/" className="text-gray-600 hover:text-gray-800">
             Home
           </a>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <a href="#aboutus" className="text-gray-600 hover:text-gray-800">
             Services
           </a>
         </li>

@@ -1,6 +1,8 @@
+import { playfair_display } from "@/app/fonts";
 import Image from "next/image";
 
 export default function FrontPage() {
+    const aboutText = "text-xl md:text-3xl font-serif tracking-wide uppercase text-teal-600";
   return (
     <main>
       <div
@@ -16,17 +18,17 @@ export default function FrontPage() {
             height={1280}
           />
         </div>
-        <div className="container flex flex-col justify-center items-center px-0 py-3">
-          <div className="container-md w-75 px-1 px-md-2 py-2 text-start">
-            <h2>About Us</h2>
-            <p>
+        <div className="container flex flex-col justify-center items-center px-0 py-3 bg-white ">
+          <div className="container-md w-3/4 px-1 px-md-2 py-2 text-left">
+          <h1 className={` ${aboutText} ${playfair_display.className}`}>About Us</h1>
+            <p className="py-4 text-slate-600">
               Perhaps a re-engineering of your current world view will
               re-energize your online nomenclature to enable a new holistic
-              interactive enterprise internet communication solution.{" "}
+              interactive enterprise internet communication solution.
             </p>
-            <p>
+            <p className="py-4">
               Fundamentally transforming well designed actionable information
-              whose semantic content is virtually null.{" "}
+              whose semantic content is virtually null.
             </p>
           </div>
         </div>
@@ -45,22 +47,22 @@ export default function FrontPage() {
             height={1280}
           />
         </div>
-        <div className="container flex flex-col justify-center items-center px-0 py-1">
-          <div className="container-md w-75 py-2 text-center">
-            <h2>Services</h2>
-            <p className="hidden lg:block">
+        <div className="container flex flex-col justify-center items-center px-0 py-1 bg-white">
+          <div className="container-md w-3/4 py-2 text-left">
+          <h1 className={` ${aboutText} ${playfair_display.className}`}>Services</h1>
+            <p className="py-4">
               Empowerment in information design literacy demands the immediate
               and complete disregard of the entire contents of this cyberspace
               communication.
             </p>
 
-            <div className="text-end self-end my-4 border-line">
-              <h4>Hair cutting, coloring & styling</h4>
-              <h4>Facials & Skin Care Treatments</h4>
-              <h4>Waxing & Other Hair Removal</h4>
-              <h4>Manicures & Pedicures</h4>
-            </div>
-            <p className="text-center small">
+            <ul className="list-disc list-inside text-cyan-700" >
+              <li>Hair cutting, coloring & styling</li>
+              <li>Facials & Skin Care Treatments</li>
+              <li>Waxing & Other Hair Removal</li>
+              <li>Manicures & Pedicures</li>
+            </ul>
+            <p className="py-4">
               <em>
                 Here is a spot for something else, too. Here is a{" "}
                 <a href="#">random link</a> that will not work.

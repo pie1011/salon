@@ -1,5 +1,5 @@
 import "./globals.css";
-import { inter } from "./fonts";
+import { roboto } from "./fonts";
 
 export const metadata = {
   metadataBase: new URL("https://salon-kh.vercel.app"),
@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

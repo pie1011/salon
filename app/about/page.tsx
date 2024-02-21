@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '@/components/footer';
+import Footer from '@/components/footer-sticky';
 import Hero from '@/components/hero';
 
 const SalonPage: React.FC = () => {

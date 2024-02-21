@@ -7,7 +7,7 @@ import Footer from "@/components/footer";
 const SalonPage: React.FC = () => {
   return (
     <div className="bg-gray-100">
-      <header className="bg-white drop-shadow-xl shadow-xl sticky top-0 z-0">
+      <header className="bg-white drop-shadow-xl shadow-xl sticky top-0">
         <Navigation />
       </header>
       <Hero />

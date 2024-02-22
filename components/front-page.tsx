@@ -56,7 +56,7 @@ export default function FrontPage() {
               communication.
             </p>
 
-            <ul className="list-disc list-inside text-cyan-700" >
+            <ul className="list-disc list-inside text-slate-400" >
               <li>Hair cutting, coloring & styling</li>
               <li>Facials & Skin Care Treatments</li>
               <li>Waxing & Other Hair Removal</li>

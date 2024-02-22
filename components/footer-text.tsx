@@ -1,5 +1,5 @@
 import React from "react";
-import StylistAccess from "@/components/stylist-access";
+import StylistAccess from "@/components/footer-stylist-access";
 
 const Footer: React.FC = () => {
   const footerHeading =
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <ul className="list-none">
               {menu.items().map((item, index) => (
                 <li key={index}>
-                  <a className="text-cyan-600" aria-current="page" href={item.value}>
+                  <a className="text-teal-600" aria-current="page" href={item.value}>
                     {item.key}
                   </a>
                 </li>

@@ -29,6 +29,11 @@ export async function seed() {
           VALUES ('Steven Tey', 'stey@vercel.com', 'https://images.ctfassets.net/e5382hct74si/4QEuVLNyZUg5X6X4cW4pVH/eb7cd219e21b29ae976277871cd5ca4b/profile.jpg')
           ON CONFLICT (email) DO NOTHING;
       `,
+    sql`
+          INSERT INTO users (name, email, image)
+          VALUES ('Nuno Maduro', 'nuno@vercel.com', 'https://images.ctfassets.net/e5382hct74si/4QEuVLNyZUg5X6X4cW4pVH/eb7cd219e21b29ae976277871cd5ca4b/profile.jpg')
+          ON CONFLICT (email) DO NOTHING;
+      `,
   ])
   console.log(`Seeded ${users.length} users`)
 

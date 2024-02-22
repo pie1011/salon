@@ -48,7 +48,7 @@ export default function FrontPage() {
           />
         </div>
         <div className="container flex flex-col justify-center items-center px-0 py-1 bg-white">
-          <div className="container-md w-3/4 py-2 text-left">
+          <div className="container-md w-3/4 py-2 text-left" id="services">
           <h1 className={` ${aboutText} ${playfair_display.className}`}>Services</h1>
             <p className="py-4">
               Empowerment in information design literacy demands the immediate

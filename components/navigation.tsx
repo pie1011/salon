@@ -62,12 +62,12 @@ const Navigation: React.FC = () => {
         </li>
         <li>
           <a href="#aboutus" className="text-gray-600 hover:text-gray-800">
-            Services
+            About
           </a>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Contact
+          <a href="#services" className="text-gray-600 hover:text-gray-800">
+            Services
           </a>
         </li>
       </ul>

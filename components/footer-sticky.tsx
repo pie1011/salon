@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
                     &copy; {currentYear} The Salon. All rights reserved.
                 </div>
                 <div className="text-sm">
-                    Made with <span className="text-red-500">&hearts;</span> by Your Name
+                    Made with <span className="text-red-500">&hearts;</span> by Katie Harshman
                 </div>
             </div>
         </footer>

@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
             <ul className="list-none">
               {menu.items().map((item, index) => (
                 <li key={index}>
-                  <a aria-current="page" href={item.value}>
+                  <a className="text-cyan-600" aria-current="page" href={item.value}>
                     {item.key}
                   </a>
                 </li>

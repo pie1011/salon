@@ -2,14 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap'); */
+
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -23,7 +22,7 @@
 
 
 
-  --color-bg: #D2EAEC;
+  /* --color-bg: #D2EAEC;
   --color-bg-light: #edf3f4;
   --color-dark: #000;
   --color-gray: #e2e3e5;
@@ -43,7 +42,7 @@
   --color-heading3: #000000;
   --color-heading4: #439097;
   --color-link: #f57676;
-  --color-purple: #D2DDEC;
+  --color-purple: #D2DDEC; */
 }
 
 body {
@@ -59,13 +58,30 @@ body {
   /* LOGO */
   .logo {
     text-transform: uppercase;
-    font-family: var(--font-heading);
     font-weight: 900;
     font-size: 1.5rem;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.25rem;
   }
 
 /* --- HERO --- */
+
+.hero-shapes {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 16% 0, 0 95%, 91% 100%, 100% 28%, 100% 100%, 91% 100%, 0 95%);
+  z-index: 900;
+  transition: 1s;
+} 
+.hero {
+  z-index: 100;
+}
+@media screen and (min-width: 768px){
+  .hero {
+    clip-path: polygon(100% 0, 100% 25%, 90% 100%, 0% 100%, 0 100%, 15% 0);
+  }
+  
+}
 /* .hero-base {
   position: relative;
 }

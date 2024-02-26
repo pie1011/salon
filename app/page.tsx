@@ -7,13 +7,18 @@ import FooterSticky from "@/components/footer-sticky";
 
 const SalonPage: React.FC = () => {
   return (
-    <div className="bg-white text-slate-600">
-      <header className="bg-white drop-shadow-xl shadow-xl sticky top-0">
+    <div className="relative bg-white text-slate-600">
+      <header className="absolute bg-white drop-shadow shadow-xl sticky top-0">
         <Navigation />
       </header>
-      <Hero />
-      <FrontPage />
-      <FooterText />
+      <main>
+        <Hero />
+        <FrontPage />
+      </main>
+
+      <footer className="shadow sticky">
+        <FooterText />
+      </footer>
       <FooterSticky />
     </div>
   );

@@ -4,7 +4,7 @@ import { playfair_display } from "@/app/fonts";
 
 const Navigation: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const linkClass = "flex items-center text-lg font-extrabold text-black logo";
+  const linkClass = "flex items-center text-lg font-extrabold text-black logo font-sans tracking-tight";
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -12,7 +12,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-      <a href="/" className={`${linkClass} ${playfair_display.className} `}>
+      <a href="/" className={`${linkClass} `}>
         the
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -53,20 +53,20 @@ const Navigation: React.FC = () => {
       <ul
         className={`${
           isNavOpen ? "block" : "hidden"
-        } md:flex md:space-x-4`}
+        } md:flex md:space-x-4 text-lg font-semibold font-serif tracking-wide uppercase md:items-center md:space-x-4 md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row md:justify-end md:w-auto md:ml-auto md:space-x-4 md:font-bold md:text-lg md:font-serif md:tracking-wide md:uppercase md:items-center md:space-y-0 md:flex-row`}
       >
         <li>
-          <a href="/" className="text-gray-600 hover:text-gray-800">
+          <a href="/" className="hover:text-rose-500">
             Home
           </a>
         </li>
         <li>
-          <a href="#aboutus" className="text-gray-600 hover:text-gray-800">
+          <a href="#aboutus" className="hover:text-rose-500">
             About
           </a>
         </li>
         <li>
-          <a href="#services" className="text-gray-600 hover:text-gray-800">
+          <a href="#services" className="hover:text-rose-500">
             Services
           </a>
         </li>

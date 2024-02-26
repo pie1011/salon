@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'selector',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -9,8 +8,22 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        default: ['var(--font-inter)'],
+        default: ['var(--font-RobotoCondensed)'],
+        sans: ['var(--font-RobotoCondensed)'],
       },
+      fontWeight: {
+        thin: '100',
+        hairline: '100',
+        extralight: '200',
+        light: '300',
+        normal: '400',
+        medium: '500',
+        semibold: '600',
+        bold: '700',
+        extrabold: '800',
+        'extra-bold': '800',
+        black: '900',
+      }
     },
   },
   plugins: [],

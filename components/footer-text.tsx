@@ -22,13 +22,12 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="sticky-bottom flex flex-col bg-teal-200/25 shadow-inner text-slate">
-      <div className="flex flex-col lg:flex-row justify-between">
-        <div className="flex flex-col md:flex-row justify-between text-sm grow px-20">
+    <footer className="sticky-bottom flex flex-col bg-teal-500/25 p-2 xl:p-10 shadow-xl">
+      <div className="flex flex-col lg:flex-row justify-between xl:pr-5">
+        <div className="flex flex-col md:flex-row justify-between text-sm grow px-20 text-slate-900">
           {/* Address */}
           <div className="mx-5 mt-5 p-0">
-            <strong>THE SALON</strong>
-            <hr className="my-2" />
+            <h3 className="mb-4 font-bold underline underline-offset-8">THE SALON</h3>
             <ul className="list-none">
               <li>555-123-4567</li>
               <li>
@@ -41,12 +40,11 @@ const Footer: React.FC = () => {
           </div>
           {/* Navigation */}
           <div className="mx-5 mt-5 p-0">
-            <strong>SITE LINKS</strong>
-            <hr className="my-2" />
+          <h3 className="mb-4 font-bold uppercase underline underline-offset-8">Navgation</h3>
             <ul className="list-none">
               {menu.items().map((item, index) => (
                 <li key={index}>
-                  <a className="text-teal-600" aria-current="page" href={item.value}>
+                  <a className="text-teal-800" aria-current="page" href={item.value}>
                     {item.key}
                   </a>
                 </li>
@@ -55,20 +53,15 @@ const Footer: React.FC = () => {
           </div>
           {/* Business Hours */}
           <div className="mx-5 mt-5 p-0">
-            <strong>BUSINESS HOURS</strong>
-            <hr className="my-2" />
+          <h3 className="mb-4 font-bold uppercase underline underline-offset-8">Business Hours</h3>
             <ul className="list-none">
               <li>Monday: 10 AM - 9 PM</li>
               <li>Tuesday: 10 AM - 9 PM</li>
               <li>Wednesday: 10 AM - 9 PM</li>
               <li>Thursday: 10 AM - 9 PM</li>
               <li>Friday: 10 AM - 9 PM</li>
-              <li>
-                <em className="text-slate-400">Saturday: 10 AM - 6 PM</em>
-              </li>
-              <li>
-                <em className="text-slate-400">Sunday: CLOSED</em>
-              </li>
+              <li className="font-bold">Saturday: 10 AM - 6 PM</li>
+              <li className="font-bold">Sunday: CLOSED</li>
             </ul>
           </div>
         </div>

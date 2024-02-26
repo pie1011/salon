@@ -18,8 +18,8 @@ export default function FrontPage() {
             height={1280}
           />
         </div>
-        <div className="container flex flex-col justify-center items-center px-0 py-3 bg-white ">
-          <div className="container-md w-3/4 px-1 px-md-2 py-2 text-left">
+        <div className="container flex flex-col justify-center items-center px-0 py-3 bg-white">
+          <div className="container-md w-3/4 px-1 px-md-2 py-2 text-left ">
           <h1 className={` ${aboutText} ${playfair_display.className}`}>About Us</h1>
             <p className="py-4 text-slate-600">
               Perhaps a re-engineering of your current world view will
@@ -56,7 +56,7 @@ export default function FrontPage() {
               communication.
             </p>
 
-            <ul className="list-disc list-inside text-slate-400" >
+            <ul className="list-disc list-inside mx-1 md:mx-4">
               <li>Hair cutting, coloring & styling</li>
               <li>Facials & Skin Care Treatments</li>
               <li>Waxing & Other Hair Removal</li>
@@ -65,7 +65,7 @@ export default function FrontPage() {
             <p className="py-4">
               <em>
                 Here is a spot for something else, too. Here is a{" "}
-                <a href="#">random link</a> that will not work.
+                <a href="#" className="text-rose-500">random link</a> that will not work.
               </em>
             </p>
           </div>

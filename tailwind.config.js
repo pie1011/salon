@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         default: ['var(--font-RobotoCondensed)'],
         sans: ['var(--font-RobotoCondensed)'],
+        serif: ['var(--font-RobotoCondensed)'],
       },
       fontWeight: {
         thin: '100',

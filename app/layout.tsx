@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth leading-relaxed">
-      <body className={`${roboto_condensed.variable} font-sans text-slate-600 `}>{children}</body>
+      <body className={`${roboto_condensed.variable} font-sans text-slate-700 `}>{children}</body>
     </html>
   );
 }

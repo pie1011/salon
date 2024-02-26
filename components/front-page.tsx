@@ -1,8 +1,9 @@
-import { playfair_display } from "@/app/fonts";
 import Image from "next/image";
 
 export default function FrontPage() {
-    const aboutText = "text-xl md:text-3xl font-serif tracking-wide uppercase text-teal-600";
+  
+  const aboutText = "text-xl md:text-3xl tracking-wide uppercase text-teal-700/75";
+  
   return (
     <main>
       <div
@@ -20,7 +21,7 @@ export default function FrontPage() {
         </div>
         <div className="container flex flex-col justify-center items-center px-0 py-3 bg-white">
           <div className="container-md w-3/4 px-1 px-md-2 py-2 text-left ">
-          <h1 className={` ${aboutText} ${playfair_display.className}`}>About Us</h1>
+          <h1 className={`${aboutText}`}>About Us</h1>
             <p className="py-4 text-slate-600">
               Perhaps a re-engineering of your current world view will
               re-energize your online nomenclature to enable a new holistic
@@ -49,7 +50,7 @@ export default function FrontPage() {
         </div>
         <div className="container flex flex-col justify-center items-center px-0 py-1 bg-white">
           <div className="container-md w-3/4 py-2 text-left" id="services">
-          <h1 className={` ${aboutText} ${playfair_display.className}`}>Services</h1>
+          <h1 className={` ${aboutText}`}>Services</h1>
             <p className="py-4">
               Empowerment in information design literacy demands the immediate
               and complete disregard of the entire contents of this cyberspace
@@ -65,7 +66,7 @@ export default function FrontPage() {
             <p className="py-4">
               <em>
                 Here is a spot for something else, too. Here is a{" "}
-                <a href="#" className="text-rose-500">random link</a> that will not work.
+                <a href="#" className="text-rose-600">random link</a> that will not work.
               </em>
             </p>
           </div>

@@ -9,7 +9,7 @@ export default function Hero() {
     "text-lg  md:text-xl  lg:text-2xl xl:ml-20 md:ml-10 mr-20 p-2 pl-4 md:pl-8 text-left font-light text-dark max-w-prose";
 
   return (
-    <main className="bg-slate-900">
+    <main>
       
       <div
         className="container-fluid min-h-screen flex flex-col md:justify-center md:items-left p-8 bg-dark overflow-hidden"
@@ -19,7 +19,7 @@ export default function Hero() {
           backgroundPosition: "right",
         }}
       >
-        <div className="text-center md:text-left m-2 p-8 xl:pr-40 xl:pl-20 bg-gradient-to-b md:bg-gradient-to-r from-white to-white-100/0">
+        <div className="rounded text-center md:text-left m-2 p-8 xl:pr-40 xl:pl-20 bg-gradient-to-b md:bg-gradient-to-r from-white to-white-100/0">
           <h1 className={` ${heroHeaderClass} ${pacifico.className}`}>
             Welcome
           </h1>

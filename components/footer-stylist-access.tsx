@@ -5,7 +5,7 @@ const StylistAccess: React.FC = () => {
   const footerHeading =
     "text-xl md:text-3xl font-serif tracking-wide uppercase text-teal-600";
 
-  const button = "rounded-none cursor-pointer hover:bg-teal-600 bg-teal-500/25 p-2 mt-2 uppercase tracking-wide text-extrabold";
+  const button = "rounded cursor-pointer hover:bg-teal-600 bg-teal-500/25 p-2 mt-2 uppercase tracking-wide text-extrabold";
 
   let current_user = {
     is_authenticated: true,
@@ -14,7 +14,7 @@ const StylistAccess: React.FC = () => {
   };
 
   return (
-    <div className="m-4 bg-white shadow-lg">
+    <div className="rounded m-4 bg-white shadow-lg">
       <div className="flex flex-col text-center px-2 pb-2 pt-4 m-5">
         <h1 className={` ${footerHeading} ${playfair_display.className}`}>
           Stylist Access

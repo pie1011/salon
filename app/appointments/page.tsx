@@ -1,8 +1,9 @@
 import React from "react";
 import Navigation from "@/components/navigation";
-import Register from "@/components/register";
+import Appointments from "@/components/appointments";
 import FooterText from "@/components/footer-text";
 import FooterSticky from "@/components/footer-sticky";
+
 
 const SalonPage: React.FC = () => {
   return (
@@ -15,12 +16,12 @@ const SalonPage: React.FC = () => {
           backgroundImage:
             "url('/images/img-adam-winger-KVVjmb3IIL8-unsplash.png')",
           backgroundAttachment: "local",
-          backgroundSize: "contain",
+            backgroundSize: "contain",
           backgroundPosition: "bottom",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Register />
+        <Appointments />
       </main>
       <footer className="shadow sticky">
         <FooterText />

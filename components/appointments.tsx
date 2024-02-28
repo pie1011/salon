@@ -1,39 +1,56 @@
-'use client'
-import RefreshButton from './refresh-button'
+import prisma from '../lib/prisma'
+import Post, { PostProps } from './appointment';
+import { GetStaticProps } from 'next';
 
-export default function Appointments() {
-  const users = [
-    { id: 1, firstName: 'John', email: 'email'  },
-    { id: 2, firstName: 'Jane', email: 'email2' }
-  ]
-  const duration = 1000
+export const getStaticProps: GetStaticProps = async () => {
+  const feed = await prisma.post.findMany({
+    where: { published: true },
+    include: {
+      author: {
+        select: { name: true },
+      },
+    },
+  });
+  return {
+    props: { feed },
+    revalidate: 10,
+  };
+};
 
+type Props = {
+  feed: PostProps[];
+};
+
+
+const Appointments: React.FC<Props> = (props) => {
   return (
-    <main className="flex justify-center items-start h-screen pt-5">
-      <div className="flex justify-between items-center mb-4">
-        <div className="space-y-1">
-          <h2 className="text-xl font-semibold">Recent Users</h2>
-          <p className="text-sm text-gray-500">
-            Fetched {users.length} users in {duration}ms
-          </p>
-        </div>
-        <RefreshButton />
-      </div>
-      <div className="divide-y divide-gray-900/5">
-        {users.map((user: any) => (
-          <div
-            key={user.id} // Add key prop with a unique value
-            className="flex items-center justify-between py-3"
-          >
-            <div className="flex items-center space-x-4">
-              <div className="space-y-1">
-                <p className="font-medium leading-none">{user.firstName}</p>
-                <p className="text-sm text-gray-500">{user.email}</p>
-              </div>
+    <main>
+      <div className="page">
+        <h1>Public Feed</h1>
+        <main>
+          {props.feed.map((post) => (
+            <div key={post.id} className="post">
+              <Post post={post} />
             </div>
-          </div>
-        ))}
+          ))}
+        </main>
       </div>
+      <style jsx>{`
+        .post {
+          background: white;
+          transition: box-shadow 0.1s ease-in;
+        }
+
+        .post:hover {
+          box-shadow: 1px 1px 3px #aaa;
+        }
+
+        .post + .post {
+          margin-top: 2rem;
+        }
+      `}</style>
     </main>
-  );
+  )
 }
+
+export default Appointments;

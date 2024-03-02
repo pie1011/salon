@@ -1,3 +1,4 @@
+"use client";
 import prisma from '../lib/prisma'
 import Post, { PostProps } from './appointment';
 import { GetStaticProps } from 'next';

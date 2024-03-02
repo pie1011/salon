@@ -1,23 +1,15 @@
 'use client'
 import React from "react";
-import Navigation from "@/components/navigation";
 import Appointments from "@/components/appointments";
-import FooterText from "@/components/footer-text";
-import FooterSticky from "@/components/footer-sticky";
 
 
 const SalonPage: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-b from-teal-400/50 to-white text-slate-700">
-      <header className="absolute bg-white drop-shadow shadow-xl sticky top-0">
-        <Navigation />
-      </header>
+    <main className="min-h-screen bg-gradient-to-b from-teal-400/50 to-white text-slate-700">
+
       <Appointments feed={[]} />
-      <footer className="shadow sticky">
-        <FooterText />
-      </footer>
-      <FooterSticky />
-    </div>
+
+    </main>
   );
 };
 

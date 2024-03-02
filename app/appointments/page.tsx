@@ -12,18 +12,7 @@ const SalonPage: React.FC = () => {
       <header className="absolute bg-white drop-shadow shadow-xl sticky top-0">
         <Navigation />
       </header>
-      <main
-        style={{
-          backgroundImage:
-            "url('/images/img-adam-winger-KVVjmb3IIL8-unsplash.png')",
-          backgroundAttachment: "local",
-            backgroundSize: "contain",
-          backgroundPosition: "bottom",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <Appointments />
-      </main>
+      <Appointments feed={[]} />
       <footer className="shadow sticky">
         <FooterText />
       </footer>

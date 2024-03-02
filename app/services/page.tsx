@@ -12,7 +12,7 @@ const SalonPage: React.FC = () => {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <h1>About Us</h1>
+        <h1>Services</h1>
       </main>
     );
 };

@@ -1,5 +1,6 @@
 // "use client";
 import React from "react";
+import { SignUp } from "@clerk/nextjs";
 
 export default function Register() {
   return (
@@ -11,6 +12,7 @@ export default function Register() {
           saepe ea ipsa est hic neque veniam culpa molestiae quo assumenda quam
           inventore.
         </p>
+        <SignUp />
       </div>
     </main>
   );

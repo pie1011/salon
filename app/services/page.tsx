@@ -18,27 +18,27 @@ const SalonPage: React.FC = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Haircut</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">A haircut is a styling technique where the hair is cut shorter to achieve a desired length or style.</p>
         </div>
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Coloring</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">Coloring is a process of changing the color of the hair using dyes or other coloring agents.</p>
         </div>
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Styling</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">Styling involves creating a desired look or shape for the hair using various techniques and tools.</p>
         </div>
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Massage</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">Massage is a therapeutic technique that involves manipulating the muscles and soft tissues of the body to promote relaxation and relieve tension.</p>
         </div>
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Facial</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">A facial is a skincare treatment that involves cleansing, exfoliating, and nourishing the skin to improve its appearance and overall health.</p>
         </div>
         <div className={`${serviceStyle}`}>
           <h2 className="text-xl font-bold mb-4">Manicure</h2>
-          <p className="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nunc id aliquam lacinia, urna nunc lacinia arcu, nec tincidunt nunc enim id lectus.</p>
+          <p title="description" className="text-gray-600">A manicure is a beauty treatment for the hands and nails, which typically includes shaping, filing, and polishing the nails.</p>
         </div>
       </div>
     </main>

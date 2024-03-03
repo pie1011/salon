@@ -1,20 +1,13 @@
 import React from "react";
-import Register from "@/components/register";
+import { SignUp } from "@clerk/nextjs";
 
 const RegisterPage: React.FC = () => {
   return (
-      <main className="min-h-screen"
-        style={{
-          backgroundImage:
-            "url('/images/img-adam-winger-KVVjmb3IIL8-unsplash.png')",
-          backgroundAttachment: "local",
-          backgroundSize: "contain",
-          backgroundPosition: "bottom",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <Register />
-      </main>
+    <main className="min-h-screen bg-gradient-to-b from-teal-400/50 to-white text-slate-700">
+      <div className="">
+        <SignUp />
+      </div>
+    </main>
   );
 };
 

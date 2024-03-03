@@ -12,6 +12,7 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@clerk/nextjs": "^4.29.9",
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@prisma/client": "5.10.2",
     "@types/ms": "^0.7.32",

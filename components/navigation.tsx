@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from "react";
-import { playfair_display } from "@/app/fonts";
+import { UserButton } from "@clerk/nextjs";
 
 const Navigation: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -69,6 +69,9 @@ const Navigation: React.FC = () => {
           <a href="/services" className="hover:text-rose-500">
             Services
           </a>
+        </li>
+        <li>
+          <UserButton />
         </li>
       </ul>
     </nav>

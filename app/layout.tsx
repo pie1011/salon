@@ -1,3 +1,4 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import localFont from "next/font/local";
 import Navigation from "@/components/navigation";
@@ -23,6 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+    <ClerkProvider>
     <html lang="en" className="scroll-smooth leading-relaxed">
       <body className={`${roboto_condensed.variable} font-sans text-slate-700 bg-white `}>
         <header className="sticky absolute bg-white drop-shadow shadow-xl top-0">
@@ -40,5 +42,6 @@ export default function RootLayout({
 
       </body>
     </html>
+    </ClerkProvider>
   );
 }

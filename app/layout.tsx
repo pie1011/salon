@@ -24,22 +24,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        signIn: {
+          variables: {
+            colorPrimary: "#14b8a6",
+            colorText: "#475569",
+          },
+        },
+      }}
+    >
       <html lang="en" className="scroll-smooth leading-relaxed">
-        <body className={`${roboto_condensed.variable} font-sans text-slate-700 bg-white `}>
+        <body
+          className={`${roboto_condensed.variable} font-sans text-slate-700 bg-white `}
+        >
           <header className="sticky absolute bg-white drop-shadow shadow-xl top-0">
             <Navigation />
           </header>
           <div className="absoulte bg-white text-slate-700 min-h-svh ">
-            <main className="min-h-full">
-              {children}
-            </main>
+            <main className="min-h-full">{children}</main>
             <footer className="">
               <Footer />
               <FooterSticky />
             </footer>
           </div>
-
         </body>
       </html>
     </ClerkProvider>

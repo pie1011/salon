@@ -1,10 +1,12 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import { UserButton } from "@clerk/nextjs";
+import { SignUpButton, SignInButton, SignedOut } from "@clerk/nextjs";
 
 const Navigation: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const linkClass = "flex items-center text-lg font-extrabold text-black logo font-sans tracking-tight";
+  const linkClass =
+    "flex items-center text-lg font-extrabold text-black logo font-sans tracking-tight";
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -74,6 +76,23 @@ const Navigation: React.FC = () => {
           <UserButton />
         </li>
       </ul>
+
+      {/* Links to sign in or sign up */}
+      <SignedOut>
+        <div className="flex p-2">
+          <SignInButton mode="modal">
+            <button className="text-teal-500 hover:text-rose-500">
+              Sign in
+            </button>
+          </SignInButton>
+          <div className="px-2"> | </div>
+          <SignUpButton>
+            <button className="text-teal-500 hover:text-rose-500">
+              Sign up
+            </button>
+          </SignUpButton>
+        </div>
+      </SignedOut>
     </nav>
   );
 };

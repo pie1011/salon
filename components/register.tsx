@@ -1,8 +1,7 @@
 // "use client";
 import React from "react";
-import { pacifico } from "@/app/fonts";
 
-export default function Hero() {
+export default function Register() {
   return (
     <main>
       <div className="rounded text-center md:text-left m-2 p-8 xl:pr-40 xl:pl-20 bg-gradient-to-b md:bg-gradient-to-r from-white to-white-100/0">

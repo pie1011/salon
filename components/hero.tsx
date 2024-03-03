@@ -10,7 +10,6 @@ export default function Hero() {
 
   return (
     <main>
-      
       <div
         className="container-fluid min-h-screen flex flex-col md:justify-center md:items-left p-8 bg-dark overflow-hidden"
         style={{

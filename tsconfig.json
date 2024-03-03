@@ -28,7 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/seed.ts"
-, "lib/script.mjs", "app/api/post/[id]/route.js", "app/add-post/route.js", "lib/prisma.ts"  ],
+     "lib/prisma.ts"  ],
   "exclude": ["node_modules"]
 }

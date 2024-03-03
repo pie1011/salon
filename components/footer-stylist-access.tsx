@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { SignInButton, SignUpButton, SignedOut } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, SignOutButton, SignedOut, SignedIn } from "@clerk/nextjs";
 
 const StylistAccess: React.FC = () => {
   const footerHeading =
@@ -29,6 +29,23 @@ const StylistAccess: React.FC = () => {
             </SignUpButton>
           </div>
         </SignedOut>
+
+        {/* Links to account or sign out */}
+        <SignedIn>
+          <div className="flex flex-col p-2">
+            <SignInButton mode="modal">
+            <button className={` ${buttonStyle} `}>
+                View Account
+              </button>
+            </SignInButton>
+            <SignOutButton>
+              <button className={` ${buttonStyle} `}>
+                Sign Out
+              </button>
+            </SignOutButton>
+          </div>
+        </SignedIn>
+
       </div>
     </div>
   );

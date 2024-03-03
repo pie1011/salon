@@ -1,6 +1,7 @@
-// "use client";
+"use client";
 import React from "react";
 import { pacifico } from "@/app/fonts";
+import LoginBtn from "@/components/login-btn";
 
 export default function Hero() {
   const heroHeaderClass =
@@ -28,6 +29,8 @@ export default function Hero() {
             molestias exercitationem iste soluta voluptate velit unde, aliquam
             saepe ea ipsa est hic neque veniam culpa molestiae quo assumenda
             quam inventore.
+            <br />
+            <LoginBtn />
           </p>
         </div>
       </div>

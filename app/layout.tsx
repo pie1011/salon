@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer-text";
 import FooterSticky from "@/components/footer-sticky";
+import AuthSessionProvider from "./providers/AuthSessionProvider";
 
 export const metadata = {
   metadataBase: new URL("https://salon-kh.vercel.app"),
@@ -37,7 +38,6 @@ export default function RootLayout({
             <FooterSticky />
           </footer>
         </div>
-
       </body>
     </html>
   );

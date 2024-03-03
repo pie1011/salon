@@ -20,7 +20,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "auth": ["./auth"]
     }
   },
   "include": [
@@ -28,7 +29,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/seed.ts"
-, "lib/script.mjs", "app/api/post/[id]/route.js", "app/add-post/route.js", "lib/prisma.ts"  ],
+    "lib/prisma.ts", "app/api/restricted.js"  ],
   "exclude": ["node_modules"]
 }

@@ -14,7 +14,7 @@ model Stylist {
   id           Int           @id @default(autoincrement())
   stylisEmail  String        @unique
   stylistName  String
-  appointments Appointment[]
+  appointments Appointment[] // This is a one-to-many relation
 }
 
 model Appointment {
@@ -23,7 +23,7 @@ model Appointment {
   stylistId  Int
   customer   Customer  @relation(fields: [customerId], references: [id])
   customerId Int
-  services   Service[]
+  services   Service[] @relation("AppointmentToService") // This is a many-to-many relation
   date       DateTime
   time       DateTime
   confirmed  Boolean
@@ -35,7 +35,7 @@ model Service {
   description  String
   price        Float
   duration     Int
-  appointments Appointment[]
+  appointments Appointment[] @relation("AppointmentToService") // This is a many-to-many relation
 }
 
 model Customer {
@@ -44,5 +44,5 @@ model Customer {
   email        String
   phone        String
   ccard        String
-  appointments Appointment[]
+  appointments Appointment[] // This is a one-to-many relation
 }

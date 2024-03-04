@@ -2,6 +2,7 @@ import React from "react";
 import { prisma } from "@/lib/prisma";
 import Appointments from "@/components/appointments";
 
+
 export default async function Dashboard() {
   // const user = await prisma.user.findUnique({
   //   where: {
@@ -9,14 +10,21 @@ export default async function Dashboard() {
   //   },
   // });
 
-  // @ts-ignore
   const customers = await prisma.customer.findMany();
-  const appointmentList = await prisma.appointment.findMany();
+  const appointmentList = await prisma.appointment.findMany(
+    {
+      include: {
+        customer: true,
+        services: { include: { appointments: true } }
+      }
+    }
+  );
+  const serviceList = await prisma.service.findMany();
 
   return (
     <main className="min-h-screen p-10 bg-gradient-to-b from-teal-400/50 to-white">
       <div className="container-fluid flex flex-col m-0 p-10 shadow bg-white">
-        <Appointments appointmentList={appointmentList} />
+        <Appointments appointmentList={appointmentList} serviceList={serviceList} />
         <table className="table-auto border">
           <thead>
             <tr>

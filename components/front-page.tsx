@@ -12,7 +12,7 @@ export default function FrontPage() {
       >
         <div className="container m-0 p-0">
           <Image
-            src="/images/img-greg-trowman-jsuWg7IXx1k-unsplash.jpg"
+            src="/images/greg-trowman-jsuWg7IXx1k-unsplash.jpg"
             alt="About Us Image - Greg Trowman"
             className="w-full"
             width={1920}

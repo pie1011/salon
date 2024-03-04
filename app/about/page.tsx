@@ -39,7 +39,7 @@ const SalonPage: React.FC = () => {
       <div className="container-fluid flex flex-col sm:flex-row p-0 m-0 shadow-xl">
         <div className="container m-0 p-0">
           <Image
-            src="/images/img-greg-trowman-jsuWg7IXx1k-unsplash.jpg"
+            src="/images/greg-trowman-jsuWg7IXx1k-unsplash.jpg"
             alt="About Us Image - Greg Trowman"
             className="w-full"
             width={1920}

@@ -7,6 +7,7 @@ export default async function Database() {
   //     email: "user1@example.com"
   //   },
   // });
+
   // @ts-ignore
   const customers = await prisma.customer.findMany();
 
@@ -22,7 +23,7 @@ export default async function Database() {
             </tr>
           </thead>
           <tbody>
-            {customers.map((customer) => (
+            {customers.map((customer: any) => ( 
               <tr key={customer.id}>
                 <td>{customer.name}</td>
                 <td>{customer.email}</td>

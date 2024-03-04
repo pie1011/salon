@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { pacifico } from "@/app/fonts";
 
 const SalonPage: React.FC = () => {
   const heroHeaderClass =

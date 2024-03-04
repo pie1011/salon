@@ -7,18 +7,18 @@ export default async function Database() {
   //     email: "user1@example.com"
   //   },
   // });
-
+  // @ts-ignore
   const customers = await prisma.customer.findMany();
 
   return (
     <main className="min-h-screen p-10 bg-gradient-to-b from-teal-400/50 to-white">
       <div className="container-fluid flex flex-col m-0 p-10 shadow bg-white">
-        <table className="table-auto">
+        <table className="table-auto border">
           <thead>
             <tr>
-              <th>Song</th>
-              <th>Artist</th>
-              <th>Year</th>
+              <th>Customer Name</th>
+              <th>Customer Email</th>
+              <th>Customer Phone</th>
             </tr>
           </thead>
           <tbody>

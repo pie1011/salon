@@ -10,36 +10,39 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-model User {
+model Stylist {
   id           Int           @id @default(autoincrement())
-  email        String        @unique
-  name         String
+  stylisEmail  String        @unique
+  stylistName  String
   appointments Appointment[]
 }
 
 model Appointment {
-  id        Int     @id @default(autoincrement())
-  confirmed Boolean
-  user      User    @relation(fields: [userId], references: [id])
-  userId    Int
-  services  Service[]
-  customer  Customer[]
+  id         Int       @id @default(autoincrement())
+  stylist    Stylist   @relation(fields: [stylistId], references: [id])
+  stylistId  Int
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  customerId Int
+  services   Service[]
+  date       DateTime
+  time       DateTime
+  confirmed  Boolean
 }
 
 model Service {
-  id        Int     @id @default(autoincrement())
-  name      String
-  description String
-  price     Float
-  duration  Int
+  id           Int           @id @default(autoincrement())
+  name         String
+  description  String
+  price        Float
+  duration     Int
   appointments Appointment[]
-  }
+}
 
 model Customer {
-  id        Int     @id @default(autoincrement())
-  name      String
-  email     String
-  phone     String
-  ccard     String
+  id           Int           @id @default(autoincrement())
+  name         String
+  email        String
+  phone        String
+  ccard        String
   appointments Appointment[]
 }

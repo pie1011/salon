@@ -44,3 +44,5 @@ Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&ut
 ## Helpful links for dev
 [Next Fonts](https://nextjs.org/docs/app/api-reference/components/font)
 [Tailwind Text Colors](https://tailwindcss.com/docs/text-color)
+
+https://www.youtube.com/watch?v=_ER9jHiylAo&t=12s

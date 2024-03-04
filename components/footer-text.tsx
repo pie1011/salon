@@ -5,18 +5,12 @@ const Footer: React.FC = () => {
   const footerHeading =
     "text-l md:text-2xl font-serif tracking-wide uppercase text-teal-800";
 
-  let current_user = {
-    is_authenticated: true,
-    user_type: "stylist",
-    username: "JohnDoe",
-  };
   let menu = {
     items: () => {
       return [
         { key: "Home", value: "/" },
-        { key: "Services", value: "/services" },
         { key: "About", value: "/about" },
-        { key: "Contact", value: "/contact" },
+        { key: "Services", value: "/services" }
       ];
     },
   };

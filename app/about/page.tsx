@@ -13,7 +13,7 @@ const SalonPage: React.FC = () => {
       <div className="container-fluid flex flex-col sm:flex-row-reverse m-0 p-0 shadow-xl ">
         <div className="container m-0 p-0">
           <Image
-            src="/images/adam-winger-WXmHwPcFamo-unsplash.jpg"
+            src="/images/adam-winger-WXmHwPcFamo-unsplash.jpeg"
             alt="Services Image - Adam Winger"
             className="w-full"
             width={1920}

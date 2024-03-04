@@ -4,42 +4,6 @@ import { Appointment } from '@prisma/client';
 
 const prisma = new PrismaClient()
 
-// schema.prisma
-
-// generator client {
-//     provider = "prisma-client-js"
-//   }
-  
-//   datasource db {
-//     provider  = "postgresql"
-//     url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-//     directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
-//   }
-  
-//   model User {
-//     id           Int           @id @default(autoincrement())
-//     email        String        @unique
-//     name         String
-//     appointments Appointment[]
-//   }
-  
-//   model Appointment {
-//     id        Int     @id @default(autoincrement())
-//     customer  String
-//     confirmed Boolean
-//     user      User    @relation(fields: [userId], references: [id])
-//     userId    Int
-//     services  Service[]
-//   }
-  
-//   model Service {
-//     id        Int     @id @default(autoincrement())
-//     name      String
-//     price     Float
-//     duration  Int
-//     appointments Appointment[]
-//     }
-  
 async function main() {
     console.log('Seeding database...');
 

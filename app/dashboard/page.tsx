@@ -1,48 +1,28 @@
 import React from "react";
 import { prisma } from "@/lib/prisma";
-import Appointments from "@/components/appointments";
-
+import DashUser from "@/components/dash-user";
+import Customers from "@/components/dash-customers";
+import Appointments from "@/components/dash-appointments";
 
 export default async function Dashboard() {
-  // const user = await prisma.user.findUnique({
-  //   where: {
-  //     email: "user1@example.com"
-  //   },
-  // });
 
   const customers = await prisma.customer.findMany();
   const appointmentList = await prisma.appointment.findMany(
     {
       include: {
         customer: true,
+        stylist: { select: { stylistEmail: true } },
         services: { include: { appointments: true } }
       }
     }
   );
-  const serviceList = await prisma.service.findMany();
 
   return (
     <main className="min-h-screen p-10 bg-gradient-to-b from-teal-400/50 to-white">
-      <div className="container-fluid flex flex-col m-0 p-10 shadow bg-white">
-        <Appointments appointmentList={appointmentList} serviceList={serviceList} />
-        <table className="table-auto border">
-          <thead>
-            <tr>
-              <th>Customer Name</th>
-              <th>Customer Email</th>
-              <th>Customer Phone</th>
-            </tr>
-          </thead>
-          <tbody>
-            {customers.map((customer: any) => ( 
-              <tr key={customer.id}>
-                <td>{customer.name}</td>
-                <td>{customer.email}</td>
-                <td>{customer.phone}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="container-fluid flex flex-row flex-wrap justify-content-top m-0 ">
+        <DashUser />
+        <Appointments appointmentList={appointmentList} />
+        <Customers customerList={customers} />
       </div>
     </main>
   );

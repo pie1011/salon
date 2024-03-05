@@ -1,41 +1,39 @@
-// schema.prisma
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider  = "postgresql"
-  url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model Stylist {
   id           Int           @id @default(autoincrement())
-  stylisEmail  String        @unique
   stylistName  String
-  appointments Appointment[] // This is a one-to-many relation
+  stylistEmail String        @unique
+  appointments Appointment[]
 }
 
 model Appointment {
   id         Int       @id @default(autoincrement())
-  stylist    Stylist   @relation(fields: [stylistId], references: [id])
-  stylistId  Int
-  customer   Customer  @relation(fields: [customerId], references: [id])
-  customerId Int
-  services   Service[] @relation("AppointmentToService") // This is a many-to-many relation
-  date       DateTime
-  time       DateTime
   confirmed  Boolean
+  customerId Int
+  date       DateTime
+  stylistId  Int
+  time       DateTime
+  customer   Customer  @relation(fields: [customerId], references: [id])
+  stylist    Stylist   @relation(fields: [stylistId], references: [id])
+  services   Service[] @relation("AppointmentToService")
 }
 
 model Service {
   id           Int           @id @default(autoincrement())
   name         String
-  description  String
   price        Float
   duration     Int
-  appointments Appointment[] @relation("AppointmentToService") // This is a many-to-many relation
+  description  String
+  appointments Appointment[] @relation("AppointmentToService")
 }
 
 model Customer {
@@ -44,5 +42,5 @@ model Customer {
   email        String
   phone        String
   ccard        String
-  appointments Appointment[] // This is a one-to-many relation
+  appointments Appointment[]
 }

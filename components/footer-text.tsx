@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between text-sm grow px-20 text-slate-900">
           {/* Address */}
           <div className="mx-5 mt-5 p-0">
-            <h2 className="mb-4 font-bold underline underline-offset-8">THE SALON</h2>
+            <p className="mb-4 font-bold underline underline-offset-8">THE SALON</p>
             <ul className="list-none">
               <li>555-123-4567</li>
               <li>
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
           </div>
           {/* Navigation */}
           <div className="mx-5 mt-5 p-0">
-          <h2 className="mb-4 font-bold uppercase underline underline-offset-8">Navgation</h2>
+          <p className="mb-4 font-bold uppercase underline underline-offset-8">Navgation</p>
             <ul className="list-none">
               {menu.items().map((item, index) => (
                 <li key={index}>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           </div>
           {/* Business Hours */}
           <div className="mx-5 mt-5 p-0">
-          <h2 className="mb-4 font-bold uppercase underline underline-offset-8">Business Hours</h2>
+          <p className="mb-4 font-bold uppercase underline underline-offset-8">Business Hours</p>
             <ul className="list-none">
               <li>Monday: 10 AM - 9 PM</li>
               <li>Tuesday: 10 AM - 9 PM</li>

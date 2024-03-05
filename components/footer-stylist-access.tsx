@@ -25,7 +25,7 @@ const StylistAccess: React.FC = () => {
               <div className="flex flex-col p-2">
                 <p>Welcome {user.firstName}!</p>
                 <SignInButton mode="modal">
-                  <button className={buttonStyle}>View Account</button>
+                  <a href="/dashboard" className={buttonStyle}>View Account</a>
                 </SignInButton>
                 <SignOutButton>
                   <button className={buttonStyle}>Sign Out</button>

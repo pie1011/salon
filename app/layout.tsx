@@ -1,15 +1,10 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
-import localFont from "next/font/local";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer-text";
-import FooterSticky from "@/components/footer-sticky";
+import localFont from 'next/font/local';
 
 export const metadata = {
   metadataBase: new URL("https://salon-kh.vercel.app"),
   title: "The Salon: Mock Website",
-  description:
-    "A simple Next.js and Tailwind app with Vercel Postgres as the database",
+  description: "A simple Next.js and Tailwind app with Vercel Postgres as the database",
 };
 
 const roboto_condensed = localFont({
@@ -24,32 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider
-      appearance={{
-        signIn: {
-          variables: {
-            colorPrimary: "#14b8a6",
-            colorText: "#475569",
-          },
-        },
-      }}
-    >
-      <html lang="en" className="scroll-smooth leading-relaxed">
-        <body
-          className={`${roboto_condensed.variable} font-sans text-slate-700 bg-white `}
-        >
-          <header className="sticky absolute bg-white drop-shadow shadow-xl top-0">
-            <Navigation />
-          </header>
-          <div className="absoulte bg-white text-slate-700 min-h-svh ">
-            <main className="min-h-full">{children}</main>
-            <footer className="">
-              <Footer />
-              <FooterSticky />
-            </footer>
-          </div>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en" className="scroll-smooth leading-relaxed">
+      <body className={`${roboto_condensed.variable} font-sans text-slate-600 `}>{children}</body>
+    </html>
   );
 }

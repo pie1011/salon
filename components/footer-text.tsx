@@ -3,14 +3,20 @@ import StylistAccess from "@/components/footer-stylist-access";
 
 const Footer: React.FC = () => {
   const footerHeading =
-    "text-l md:text-2xl font-serif tracking-wide uppercase text-teal-800";
+    "text-l md:text-2xl font-serif tracking-wide uppercase text-teal-600";
 
+  let current_user = {
+    is_authenticated: true,
+    user_type: "stylist",
+    username: "JohnDoe",
+  };
   let menu = {
     items: () => {
       return [
         { key: "Home", value: "/" },
+        { key: "Services", value: "/services" },
         { key: "About", value: "/about" },
-        { key: "Services", value: "/services" }
+        { key: "Contact", value: "/contact" },
       ];
     },
   };
@@ -21,7 +27,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between text-sm grow px-20 text-slate-900">
           {/* Address */}
           <div className="mx-5 mt-5 p-0">
-            <p className="mb-4 font-bold underline underline-offset-8">THE SALON</p>
+            <h3 className="mb-4 font-bold underline underline-offset-8">THE SALON</h3>
             <ul className="list-none">
               <li>555-123-4567</li>
               <li>
@@ -34,7 +40,7 @@ const Footer: React.FC = () => {
           </div>
           {/* Navigation */}
           <div className="mx-5 mt-5 p-0">
-          <p className="mb-4 font-bold uppercase underline underline-offset-8">Navgation</p>
+          <h3 className="mb-4 font-bold uppercase underline underline-offset-8">Navgation</h3>
             <ul className="list-none">
               {menu.items().map((item, index) => (
                 <li key={index}>
@@ -47,7 +53,7 @@ const Footer: React.FC = () => {
           </div>
           {/* Business Hours */}
           <div className="mx-5 mt-5 p-0">
-          <p className="mb-4 font-bold uppercase underline underline-offset-8">Business Hours</p>
+          <h3 className="mb-4 font-bold uppercase underline underline-offset-8">Business Hours</h3>
             <ul className="list-none">
               <li>Monday: 10 AM - 9 PM</li>
               <li>Tuesday: 10 AM - 9 PM</li>
@@ -59,7 +65,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
         </div>
-        <div className="flex-grow"></div>
         <StylistAccess />
       </div>
     </footer>

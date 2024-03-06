@@ -28,7 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "lib/seed.ts"
-  ],
+     "lib/prisma.ts"  ],
   "exclude": ["node_modules"]
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 
+//       backgroundColor: "#f3f4f6",
 
 const SalonPage: React.FC = () => {
 
@@ -12,7 +13,7 @@ const SalonPage: React.FC = () => {
       backgroundSize: "contain",
       backgroundPosition: "bottom",
       backgroundRepeat: "no-repeat",
-      backgroundColor: "#f3f4f6"
+      backgroundColor: "#fff1f2"
     }}>
       <h1 className="text-4xl font-bold mb-8">Services</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

@@ -5,7 +5,7 @@ function HookTest() {
   const [data, setData] = useState(null);
 
   const handleEvent = async () => {
-    const response = await fetch('/api/webhooks', {
+    const response = await fetch('/api/webhooks/route', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

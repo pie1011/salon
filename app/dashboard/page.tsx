@@ -5,6 +5,7 @@ import Customers from "@/components/dash-customers";
 import Appointments from "@/components/dash-appointments";
 import DashApptsTable from "@/components/dash-appts-table";
 
+// https://blog.logrocket.com/creating-react-sortable-table/
 
 export default async function Dashboard() {
 
@@ -22,7 +23,7 @@ export default async function Dashboard() {
   const appointmentListFlat = appointmentList.flatMap(appointment => {
     return {
       date: appointment.date.toDateString(),
-      confirmed: appointment.confirmed,
+      confirmed: appointment.confirmed.toString(),
       appointmentId: appointment.id,
       services: appointment.services.map(service => service.name).join(", "),
       stylistEmail: appointment.stylist.stylistEmail,

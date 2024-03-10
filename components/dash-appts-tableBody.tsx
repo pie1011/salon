@@ -17,7 +17,7 @@ const TableBody = ({
             console.log(tableData[i]);
         }
         return (
-            <tr key={index}>
+            <tr key={index} className="" >
                 {columns.map((column) => {
                     return (
                         <td key={column.accessor} id={column.accessor}>

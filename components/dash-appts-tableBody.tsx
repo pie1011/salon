@@ -17,10 +17,10 @@ const TableBody = ({
             console.log(tableData[i]);
         }
         return (
-            <tr key={index} className="" >
+            <tr key={index} className="bg-white" >
                 {columns.map((column) => {
                     return (
-                        <td key={column.accessor} id={column.accessor}>
+                        <td key={column.accessor} id={column.accessor} className="px-3 py-1">
                             {data[column.accessor]}
                         </td>
                     );

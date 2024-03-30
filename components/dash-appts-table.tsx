@@ -20,7 +20,7 @@ export default function Appointments({ appointmentList }: AppointmentsProps) {
     ]
 
     return (
-        <table className="table table-auto border w-full text-sm">
+        <table className="table table-auto border w-full text-sm shadow-lg">
             <TableHead columns={columns} />
             <TableBody columns={columns} tableData={tableData} />
         </table>

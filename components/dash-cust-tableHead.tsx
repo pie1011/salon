@@ -24,7 +24,7 @@ const TableHead = ({ columns, handleSorting }: { columns: Column[], handleSortin
         <thead>
             <tr>
                 <th className="bg-gray-100 border text-xl text-left px-8 py-4" colSpan={columns.length}>
-                    Appointments
+                    Customers
                 </th>
             </tr>
             <tr>

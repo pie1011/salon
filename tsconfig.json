@@ -28,6 +28,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-     "lib/prisma.ts"  ],
+     "lib/prisma.ts", "lib/hooks/useSortableTable.js"  ],
   "exclude": ["node_modules"]
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { prisma } from "@/lib/prisma";
 import DashUser from "@/components/dash-user";
-import Customers from "@/components/dash-customers";
+import Customers from "@/components/dash-cust-table";
 import Appointments from "@/components/dash-appointments";
 import DashApptsTable from "@/components/dash-appts-table";
 
@@ -37,7 +37,9 @@ export default async function Dashboard() {
     <main className="min-h-screen p-10 bg-gradient-to-b from-teal-400/50 to-white">
       <div className="container-fluid flex flex-row flex-wrap justify-content-top m-0 ">
 
+        <DashUser />
         <DashApptsTable appointmentList={appointmentListFlat} />
+        <Customers customerList={customers} />
       </div>
     </main>
   );

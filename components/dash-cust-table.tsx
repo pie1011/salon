@@ -1,22 +1,20 @@
 "use client";
 import { useState } from "react";
-import TableBody from "@/components/dash-appts-tableBody";
-import TableHead from "@/components/dash-appts-tableHead";
+import TableBody from "@/components/dash-cust-tableBody";
+import TableHead from "@/components/dash-cust-tableHead";
 
-interface AppointmentsProps {
-    appointmentList: any[];
+interface CustomersProps {
+    customerList: any[];
 }
 
-export default function Appointments({ appointmentList }: AppointmentsProps) {
+export default function Customers({ customerList }: CustomersProps) {
 
-    const [tableData, setTableData] = useState(appointmentList);
+    const [tableData, setTableData] = useState(customerList);
 
     const columns = [
-        { label: "Date", accessor: "date", sortable: true },
-        { label: "Customer", accessor: "customerName", sortable: true },
-        { label: "Service", accessor: "services", sortable: true },
-        { label: "Stylist", accessor: "stylistEmail", sortable: true },
-        { label: "Confirmed", accessor: "confirmed", sortable: true }
+        { label: "Name", accessor: "name", sortable: true },
+        { label: "Email", accessor: "email", sortable: true },
+        { label: "Phone", accessor: "phone", sortable: true }
     ]
 
     const handleSorting = (sortField: string, sortOrder: string): void => {
@@ -35,7 +33,7 @@ export default function Appointments({ appointmentList }: AppointmentsProps) {
     }
 
     return (
-        <table className="table table-auto border w-full text-sm shadow-lg">
+        <table className="table table-auto border w-full text-sm shadow-lg my-5">
             <TableHead {...{ columns, handleSorting }} />
             <TableBody {...{ columns, tableData }} />
         </table>

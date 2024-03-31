@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { UserButton } from "@clerk/nextjs";
-import { SignUpButton, SignInButton, SignedOut } from "@clerk/nextjs";
+import { SignUpButton, SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Navigation: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -73,6 +73,11 @@ const Navigation: React.FC = () => {
           </a>
         </li>
         <li>
+          <SignedIn>
+            <a href="/dashboard" className="text-teal-500 hover:text-rose-500 hover:text-rose-500">
+              Dashboard
+            </a>
+          </SignedIn>
           <UserButton />
         </li>
       </ul>

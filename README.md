@@ -14,7 +14,7 @@ relatedTemplates:
   - postgres-sveltekit
 ---
 
-# Vercel Postgres Next.js Starter
+# Salon - Mock website
 
 Simple Next.js site that uses [Vercel Postgres](https://vercel.com/postgres) as the database.
 
@@ -37,9 +37,6 @@ Next, run Next.js in development mode:
 ```bash
 pnpm dev
 ```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples) ([Documentation](https://nextjs.org/docs/deployment)).
-
 
 ## Helpful links for dev
 [Next Fonts](https://nextjs.org/docs/app/api-reference/components/font)

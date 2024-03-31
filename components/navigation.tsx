@@ -78,6 +78,8 @@ const Navigation: React.FC = () => {
               Dashboard
             </a>
           </SignedIn>
+        </li>
+        <li>
           <UserButton />
         </li>
       </ul>
